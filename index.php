@@ -86,12 +86,10 @@ error_reporting(E_ALL);
     </header>
 
     <div class="container">
-    <?php 
-        foreach($faq as $item) {
-            echo "<h2> {$item["domanda"]} </h2>";
-            echo "<p> {$item["risposta"]} </p>";
-        };
-    ?> 
+    <?php foreach($faq as $item) : ?>
+            <h2> <?php echo $item["domanda"]; ?> </h2>
+            <p> <?php echo $item["risposta"]; ?> </p>
+        <?php endforeach;?> 
     
     </div>
 
